@@ -1,0 +1,442 @@
+.hero {
+  padding-bottom: 10rem;
+
+  @include tablet {
+    padding-bottom: 14rem;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__box__title {
+    margin-bottom: 5.4rem;
+    font-family: var(--font-family-base);
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 1.09;
+    color: var(--color-white);
+
+    @include desktop {
+      text-align: center;
+      // font-size: 6rem;
+    }
+
+    // @include mobile {
+    //   font-size: 5rem;
+    // }
+  }
+
+  &__box__name {
+    background: var(--color-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__box_description {
+    margin-bottom: 5.4rem;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.63;
+    hyphens: auto;
+    color: var(--color-white);
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__box__left,
+  &__box__right {
+    flex: 1 1 50%;
+  }
+
+  &__box__left {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__box__button__container {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__button__left {
+    display: inline-block;
+    margin-bottom: 6rem;
+    margin-right: 2rem;
+    padding: 2rem 8rem;
+    border-width: 1px;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.46;
+    color: var(--color-white);
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 5rem;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__button__right {
+    padding: 2rem 5.5rem;
+    border-width: 1px;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.46;
+    color: var(--color-white);
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 5rem;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__button__right:hover,
+  &__button__left:hover:hover {
+    background-position: 100% 0;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__button__right:focus,
+  &__button__left:focus {
+    outline: none;
+  }
+
+  &__button__right.color-1,
+  &__button__left.color-1 {
+    background-image: var(--color-gradient-hover);
+    box-shadow: var(--box-shadow);
+  }
+
+  &__information {
+    display: flex;
+    margin-bottom: 11rem;
+    column-gap: 8rem;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    &__card {
+      width: 12.6rem;
+      height: 12.6rem;
+    }
+
+    &__number {
+      display: flex;
+      align-items: center;
+    }
+
+    &__info {
+      font-family: var(--font-family-base);
+      font-weight: 400;
+      font-size: 6.2rem;
+      line-height: 1.09;
+      color: var(--color-white);
+      &__letter {
+        font-family: var(--font-family-base);
+        font-weight: 400;
+        font-size: 6.2rem;
+        line-height: 1.09;
+        letter-spacing: -3%;
+        color: var(--color-white);
+      }
+    }
+
+    &__operand {
+      font-family: var(--font-family-base);
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 6.2rem;
+      line-height: 1.09;
+      background: linear-gradient(263.46deg, #237249 3.14%, #35c66b 87.2%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__description {
+      font-family: var(--font-family-base);
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.44;
+      color: var(--color-gray-dark);
+    }
+  }
+
+  &__box__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__background__image {
+    position: relative;
+    background-image: url(./../../image/hero/coffe_cup_2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46.8rem;
+    height: 62.8rem;
+
+    @include desktop {
+      margin-bottom: 4rem;
+    }
+
+    @include mobile {
+      background-size: auto;
+      background-position: center;
+      width: 25.6rem;
+      height: 34.4rem;
+    }
+  }
+
+  &__background__discount {
+    position: absolute;
+    bottom: 430px;
+    right: 22px;
+    color: var(--color-white);
+    transform: rotate(-30deg);
+
+    @include mobile {
+      width: 15rem;
+      height: 15rem;
+      bottom: 226px;
+      right: 0px;
+    }
+  }
+
+  &__background__text {
+    position: absolute;
+    display: inline-flex;
+    bottom: 505px;
+    right: 126px;
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    font-size: 5.6rem;
+    line-height: 1.46;
+    color: var(--color-white);
+    transform: rotate(-22deg);
+
+    @include mobile {
+      bottom: 275px;
+      right: 67px;
+      font-size: 2.7rem;
+    }
+  }
+
+  &__background__percent {
+    position: absolute;
+    display: inline-flex;
+    bottom: 528px;
+    right: 80px;
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    font-size: 5.6rem;
+    line-height: 1.46;
+    color: var(--color-white);
+    transform: rotate(-17deg);
+
+    @include mobile {
+      bottom: 293px;
+      right: 33px;
+      font-size: 2.7rem;
+    }
+  }
+
+  &__background__top__blur {
+    position: absolute;
+    right: 151px;
+    bottom: 265px;
+    z-index: -1;
+    width: 100%;
+
+    @include mobile {
+      right: 97px;
+      bottom: 137px;
+    }
+  }
+
+  &__background__bottom__blur {
+    position: absolute;
+    left: 88px;
+    top: 279px;
+    z-index: -2;
+    width: 100%;
+
+    @include mobile {
+      left: 44px;
+      top: 163px;
+    }
+
+    @include mobile-s {
+      left: 30px;
+      top: 161px;
+    }
+  }
+
+  &__customer__info {
+    position: relative;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    max-width: 103.9rem;
+    min-height: 40rem;
+    opacity: 1;
+    border-radius: 5rem;
+    background-color: var(--color-white);
+  }
+
+  &__customer__propose {
+    display: flex;
+    justify-content: space-around;
+
+    @include desktop {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__customer__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 33%;
+
+    @include tablet {
+      flex: 1 1 33%;
+    }
+  }
+
+  &__customer__background {
+    display: inline-block;
+    width: 14.8rem;
+    height: 14.8rem;
+    background-color: #0ba360;
+    border-radius: 100%;
+    margin-bottom: 5rem;
+    cursor: pointer;
+  }
+
+  &__customer__image-1 {
+    position: relative;
+    left: 0.5rem;
+    bottom: 1.5rem;
+    object-fit: cover;
+  }
+
+  &__customer__image-2 {
+    position: relative;
+    left: -47px;
+    bottom: 15px;
+    object-fit: cover;
+  }
+
+  &__customer__image-3 {
+    position: relative;
+    left: -32px;
+    bottom: -6px;
+    object-fit: cover;
+  }
+
+  &__customer__subtitle {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 1.63;
+    color: var(--color-black-dark);
+  }
+
+  &__customer__description {
+    width: 22rem;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.63;
+    text-align: center;
+    color: var(--color-black-dark);
+  }
+
+  &__informnation__number {
+    display: flex;
+    align-items: center;
+  }
+
+  &__customer__star {
+    position: absolute;
+    bottom: 301px;
+    left: -36px;
+    width: 17.8rem;
+    height: 17.8rem;
+
+    @include mobile {
+      bottom: 586px;
+      left: -67px;
+    }
+
+    @include tablet {
+      top: -57px;
+      left: -41px;
+      width: 14rem;
+      height: 14rem;
+    }
+
+    &__descr {
+      position: absolute;
+      top: -35px;
+      left: 12px;
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 0.86;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--color-white);
+
+      @include tablet {
+        top: -22px;
+        left: -3px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

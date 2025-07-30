@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Starbucks 1.0v</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__item">
+          <a href="" class="header__logo__link">
+            <img
+              class="header__logo"
+              src="./image/logo/StarBucks.webp"
+              alt="Starbucks"
+            />
+          </a>
+          <nav class="header__nav">
+            <ul class="header__list" id="header__list">
+              <li class="header__list__item">
+                <a href="#" class="header__list__link">Home</a>
+              </li>
+              <li class="header__list__item">
+                <a href="#" class="header__list__link">Select</a>
+              </li>
+              <li class="header__list__item">
+                <a href="#" class="header__list__link">Shop</a>
+              </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+              <span class="hamburger__bar"></span>
+              <span class="hamburger__bar"></span>
+              <span class="hamburger__bar"></span>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__item">
+            <div class="hero__box__left">
+              <h1 class="hero__box__title">
+                New Cafe by
+                <strong class="hero__box__name">Starbucks</strong>
+              </h1>
+              <p class="hero__box_description">
+                Have time to buy the most harmonious drinks in the new Starbucks
+                coffee and don't forget about the discount!
+              </p>
+              <div class="hero__box__button__container">
+                <a href="#" class="hero__button__left color-1"
+                  >Select a coffee
+                </a>
+                <a href="#" class="hero__button__right color-1">More </a>
+              </div>
+              <div class="hero__information">
+                <div class="hero__information__card">
+                  <div class="hero__information__number">
+                    <p class="hero__information__info" data-digits-counter>9</p>
+                    <span class="hero__information__info__letter">K</span>
+                    <span class="hero__information__operand">+</span>
+                  </div>
+                  <p class="hero__information__description">Premium Users</p>
+                </div>
+                <div class="hero__information__card">
+                  <div class="hero__information__number">
+                    <p class="hero__information__info" data-digits-counter>2</p>
+                    <span class="hero__information__info__letter">K</span>
+                    <span class="hero__information__operand">+</span>
+                  </div>
+                  <p class="hero__information__description">Happy Customer</p>
+                </div>
+                <div class="hero__information__card">
+                  <div class="hero__information__number">
+                    <p class="hero__information__info" data-digits-counter>
+                      28
+                    </p>
+                    <span class="hero__information__operand">+</span>
+                  </div>
+                  <p class="hero__information__description">Awards Winning</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__box__right">
+              <div class="hero__background__image">
+                <img
+                  src="./image/hero/discount.svg"
+                  alt="greenCircle"
+                  class="hero__background__discount"
+                />
+                <p class="hero__background__text" data-digits-counter>45</p>
+                <span class="hero__background__percent">%</span>
+                <img
+                  src="./image/hero/blurTopForCoffee.svg"
+                  alt="topBlurForCoffee"
+                  class="hero__background__top__blur"
+                />
+                <img
+                  src="./image/hero/blurForCup.svg"
+                  alt="bottomBlurForCoffee"
+                  class="hero__background__bottom__blur"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hero__customer__info">
+            <div class="hero__customer__propose">
+              <div class="hero__customer__card">
+                <div class="hero__customer__background">
+                  <img
+                    class="hero__customer__image-1"
+                    src="./image/hero/hearth.webp"
+                    alt="hearth"
+                  />
+                </div>
+                <h3 class="hero__customer__subtitle">Tasty</h3>
+                <p class="hero__customer__description">
+                  We have the most delicious coffee
+                </p>
+              </div>
+              <div class="hero__customer__card">
+                <div class="hero__customer__background">
+                  <img
+                    class="hero__customer__image-2"
+                    src="./image/hero/roket.webp"
+                    alt="hearth"
+                  />
+                </div>
+                <h3 class="hero__customer__subtitle">Fast</h3>
+                <p class="hero__customer__description">
+                  Our cafe will serve you quickly
+                </p>
+              </div>
+              <div class="hero__customer__card">
+                <div class="hero__customer__background">
+                  <img
+                    class="hero__customer__image-3"
+                    src="./image/hero/money.svg"
+                    alt="hearth"
+                  />
+                </div>
+                <h3 class="hero__customer__subtitle">Available</h3>
+                <p class="hero__customer__description">
+                  Cafe will serveat the most pleasant prices
+                </p>
+              </div>
+            </div>
+            <img
+              class="hero__customer__star"
+              src="./image/hero/star__info.svg"
+              alt="star"
+            />
+            <span class="hero__customer__star__descr">We <br />Have</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="delicious">
+        <div class="container">
+          <div class="delicious__box__item">
+            <div class="delicious__box__left">
+              <div class="delicious__image__box">
+                <div class="delicious__image__background"></div>
+                <img
+                  class="delicious__image__cafe"
+                  src="./image/delicious/caffePhotoFull.webp"
+                  alt="photoCafe"
+                />
+                <img
+                  class="delicious__star"
+                  src="./image/delicious/Star__delicious.svg"
+                  alt="star"
+                />
+                <span class="delicious__star__description"
+                  >We <br />
+                  Have</span
+                >
+              </div>
+            </div>
+            <div class="delicious__box__right">
+              <h2 class="delicious__title">
+                We make <br />
+                <strong>Delicious</strong>
+              </h2>
+              <p class="delicious__description">
+                Only in 2021 we have made more than 100,000 orders for you, your
+                loved ones, all of you, and in 2022 we are ready to destroy the
+                market
+              </p>
+              <!-- <img src="./image/delicious/cafeCookingFull.webp" alt="cooking" /> -->
+              <div class="delicious__background__image__button">
+                <div class="delicious_button color-1">
+                  <span class="delicious_button__tooltip-1"
+                    >Roast the beans</span
+                  >
+                  <span class="delicious_button__tooltip-2">Making coffee</span>
+                  <span class="delicious_button__tooltip-3"
+                    >Give you coffee</span
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 53 58"
+                    height="29"
+                    width="28"
+                  >
+                    <path
+                      stroke-width="9"
+                      stroke="currentColor"
+                      d="M44.25 36.3612L17.25 51.9497C11.5833 55.2213 4.5 51.1318 4.50001 44.5885L4.50001 13.4115C4.50001 6.86824 11.5833 2.77868 17.25 6.05033L44.25 21.6388C49.9167 24.9104 49.9167 33.0896 44.25 36.3612Z"
+                    ></path>
+                  </svg>
+                  <span> Cooking Process </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <div class="container">
+          <div class="products__info__items">
+            <h2 class="products__info__title">
+              New Our <strong>Products</strong>
+            </h2>
+            <p class="products__info__description">
+              Have time to buy the most harmonious drinks in the new Starbucks
+              coffee and don't forget about the discount! Starbucks coffee and
+              don't forget about the discount!
+            </p>
+          </div>
+          <ul class="products__info__box">
+            <li class="products__info__card" style="--i: 0">
+              <div class="products__info__image__box">
+                <img
+                  class="products__info__image"
+                  src="./image/product/coffe_cup_1.png"
+                  alt="coffeeCup"
+                />
+              </div>
+              <div class="products__info__card__content">
+                <h3 class="products__info__card__title">Iced Coffee</h3>
+                <p class="products__info__card__subtitle">
+                  Our cafe will serve you quickly
+                </p>
+                <div class="products__info__card__cost">
+                  <span class="products__info__card__price">4.25$</span>
+                  <span class="products__info__card__capacity">355 ml</span>
+                </div>
+                <button
+                  id="openPopupBtn"
+                  class="products__info__card__button color-1"
+                >
+                  Buy Product
+                </button>
+              </div>
+            </li>
+            <li class="products__info__card" style="--i: 1">
+              <div class="products__info__image__box">
+                <img
+                  class="products__info__image"
+                  src="./image/product/coffe_cup_3.png"
+                  alt="coffeeCup"
+                />
+              </div>
+              <div class="products__info__card__content">
+                <h3 class="products__info__card__title">Latte</h3>
+                <p class="products__info__card__subtitle">
+                  Our cafe will serve you quickly
+                </p>
+                <div class="products__info__card__cost">
+                  <span class="products__info__card__price">5.25$</span>
+                  <span class="products__info__card__capacity">355 ml</span>
+                </div>
+                <button
+                  id="openPopupBtn"
+                  class="products__info__card__button color-1"
+                >
+                  Buy Product
+                </button>
+              </div>
+            </li>
+            <li class="products__info__card" style="--i: 2">
+              <div class="products__info__image__box">
+                <img
+                  class="products__info__image"
+                  src="./image/product/coffe_cup_1.png"
+                  alt="coffeeCup"
+                />
+              </div>
+              <div class="products__info__card__content">
+                <h3 class="products__info__card__title">Macchiato</h3>
+                <p class="products__info__card__subtitle">
+                  Our cafe will serve you quickly
+                </p>
+                <div class="products__info__card__cost">
+                  <span class="products__info__card__price">4.75$</span>
+                  <span class="products__info__card__capacity">473 ml</span>
+                </div>
+                <button
+                  id="openPopupBtn"
+                  class="products__info__card__button color-1"
+                >
+                  Buy Product
+                </button>
+              </div>
+            </li>
+            <li class="products__info__card" style="--i: 3">
+              <div class="products__info__image__box">
+                <img
+                  class="products__info__image"
+                  src="./image/product/coffe_cup_3.png"
+                  alt="coffeeCup"
+                />
+              </div>
+              <div class="products__info__card__content">
+                <h3 class="products__info__card__title">Pink Drink</h3>
+                <p class="products__info__card__subtitle">
+                  Our cafe will serve you quickly
+                </p>
+                <div class="products__info__card__cost">
+                  <span class="products__info__card__price">5,95$</span>
+                  <span class="products__info__card__capacity">355 ml</span>
+                </div>
+                <button
+                  id="openPopupBtn"
+                  class="products__info__card__button color-1"
+                >
+                  Buy Product
+                </button>
+              </div>
+            </li>
+          </ul>
+          <!-- <div class="mobile__stack">
+            <article class="card a" style="--i: 0">
+              <div class="products__info__card">
+                <div class="products__info__image__box">
+                  <img
+                    class="products__info__image"
+                    src="./image/product/coffe_cup_1.png"
+                    alt="coffeeCup"
+                  />
+                </div>
+                <div class="products__info__card__content">
+                  <h3 class="products__info__card__title">Iced Coffee</h3>
+                  <p class="products__info__card__subtitle">
+                    Our cafe will serve you quickly
+                  </p>
+                  <div class="products__info__card__cost">
+                    <span class="products__info__card__price">4.25$</span>
+                    <span class="products__info__card__capacity">355 ml</span>
+                  </div>
+                  <button
+                    id="openPopupBtn"
+                    class="products__info__card__button color-1"
+                  >
+                    Buy Product
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card b" style="--i: 1">
+              <div class="products__info__card">
+                <div class="products__info__image__box">
+                  <img
+                    class="products__info__image"
+                    src="./image/product/coffe_cup_3.png"
+                    alt="coffeeCup"
+                  />
+                </div>
+                <div class="products__info__card__content">
+                  <h3 class="products__info__card__title">Latte</h3>
+                  <p class="products__info__card__subtitle">
+                    Our cafe will serve you quickly
+                  </p>
+                  <div class="products__info__card__cost">
+                    <span class="products__info__card__price">5.25$</span>
+                    <span class="products__info__card__capacity">355 ml</span>
+                  </div>
+                  <button
+                    id="openPopupBtn"
+                    class="products__info__card__button color-1"
+                  >
+                    Buy Product
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card c" style="--i: 2">
+              <div class="products__info__card">
+                <div class="products__info__image__box">
+                  <img
+                    class="products__info__image"
+                    src="./image/product/coffe_cup_1.png"
+                    alt="coffeeCup"
+                  />
+                </div>
+                <div class="products__info__card__content">
+                  <h3 class="products__info__card__title">Macchiato</h3>
+                  <p class="products__info__card__subtitle">
+                    Our cafe will serve you quickly
+                  </p>
+                  <div class="products__info__card__cost">
+                    <span class="products__info__card__price">4.75$</span>
+                    <span class="products__info__card__capacity">473 ml</span>
+                  </div>
+                  <button
+                    id="openPopupBtn"
+                    class="products__info__card__button color-1"
+                  >
+                    Buy Product
+                  </button>
+                </div>
+              </div>
+            </article>
+            <article class="card d" style="--i: 3">
+              <div class="products__info__card">
+                <div class="products__info__image__box">
+                  <img
+                    class="products__info__image"
+                    src="./image/product/coffe_cup_3.png"
+                    alt="coffeeCup"
+                  />
+                </div>
+                <div class="products__info__card__content">
+                  <h3 class="products__info__card__title">Pink Drink</h3>
+                  <p class="products__info__card__subtitle">
+                    Our cafe will serve you quickly
+                  </p>
+                  <div class="products__info__card__cost">
+                    <span class="products__info__card__price">5,95$</span>
+                    <span class="products__info__card__capacity">355 ml</span>
+                  </div>
+                  <button
+                    id="openPopupBtn"
+                    class="products__info__card__button color-1"
+                  >
+                    Buy Product
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="events">
+        <div class="container">
+          <h2 class="events__title">Our New <strong>Events</strong></h2>
+          <p class="events__subtitle">
+            Only in 2021 we have made more than 100,000 orders for you, your
+            loved ones, all of you, and in 2022 we are ready to destroy the
+            market
+          </p>
+        </div>
+      </section>
+
+      <section class="popUpMenu">
+        <div class="popup" id="contact__popup">
+          <div class="popup__content">
+            <span class="popup__close__btn" onclick="closePopup()"
+              >&times;</span
+            >
+            <h2 class="popup__title">
+              Leave your details and select the quantity
+            </h2>
+            <form class="form" id="contact__form">
+              <div class="form__group">
+                <label for="first__name" class="form__label">Your Name</label>
+                <input
+                  type="text"
+                  id="first__name"
+                  name="firstName"
+                  class="form__input"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="last__name" class="form__label">Last Name</label>
+                <input
+                  type="text"
+                  id="last__name"
+                  name="lastName"
+                  class="form__input"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="phone__number" class="form__label">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone__number"
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                  class="form__input"
+                  required
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="order__quantity" class="form__label">
+                  Order amount:
+                </label>
+                <input
+                  type="number"
+                  id="order__quantity"
+                  name="orderQuantity"
+                  min="1"
+                  value="1"
+                  class="form__input"
+                  required
+                />
+                <small class="form__help__text">Select amount</small>
+              </div>
+
+              <button type="submit" class="form__submit__button color-1">
+                Send Order
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="thank__you" id="thank__you__popup">
+          <div class="thank__you__content">
+            <span class="thank__you__close__btn" onclick="closeThankYouPopup()"
+              >&times;</span
+            >
+            <h2 class="thank__you__title">Thank you for your order!</h2>
+            <p class="thank__you__text">
+              Your application has been successfully submitted. We will contact
+              you shortly.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor2" id="cursor2"></div>
+    <div class="cursor3" id="cursor3"></div>
+  </body>
+</html>

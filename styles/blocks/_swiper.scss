@@ -1,0 +1,46 @@
+// .mobile__stack {
+//   @include tablet {
+//     display: flex;
+//     justify-content: center;
+//     width: 450px;
+//     height: 640px;
+//     margin: 0 auto;
+//     user-select: none;
+//     touch-action: none;
+//     transform-style: preserve-3d;
+
+//     @include mobile {
+//       width: 350px;
+//       height: 540px;
+//     }
+
+//     @include mobile-s {
+//       width: 300px;
+//       height: 540px;
+//     }
+//   }
+// }
+
+// .card {
+//   cursor: grab;
+//   padding: 2rem;
+//   background-color: var(--color-green);
+//   display: grid;
+//   place-content: center;
+//   place-self: center;
+//   position: absolute;
+//   border-radius: 30px;
+//   z-index: calc(var(--card-max-z-index) - var(--i));
+//   transform: perspective(var(--card-perspective))
+//     translateZ(calc(-1 * var(--card-z-offset) * var(--i)))
+//     translateY(calc(var(--card-y-offset) * var(--i)))
+//     translateX(var(--swipe-x, 0px)) rotateY(var(--swipe-rotate, 0deg));
+//   transition: transform var(--card-swap-duration) ease;
+//   will-change: transform;
+//   box-shadow: var(--color-gray) 6px 2px 16px 0px,
+//     var(--color-gray) -6px -2px 16px 0px;
+// }
+
+// .card:active {
+//   cursor: grabbing;
+// }

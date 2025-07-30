@@ -1,0 +1,187 @@
+//
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    .popup__content {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  &__content {
+    background-image: var(--color-gradient);
+    padding: 3rem;
+    border-radius: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 550px;
+    width: 90%;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: relative;
+  }
+  &__close__btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.8rem;
+    cursor: pointer;
+    color: var(--color-gray);
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--color-black-dark);
+    }
+  }
+  &__title {
+    color: var(--color-black-dark);
+    margin-bottom: 2.6rem;
+    text-align: center;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+  }
+}
+.form__group {
+  margin-bottom: 1.5rem;
+}
+.form__label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: var(--color-black-dark);
+}
+.form__input {
+  width: calc(100% - 20px);
+  padding: 1.2rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid #ddd;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  &::placeholder {
+    color: var(--color-green);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+  &:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  }
+}
+.form__help__text {
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--color-black-dark);
+}
+.form__submit__button {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 146%;
+  color: var(--color-white);
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 3rem;
+  cursor: pointer;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  &.color-1 {
+    background-image: var(--color-gradient-hover);
+    box-shadow: var(--box-shadow);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-position: 100% 0;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+}
+.thank__you {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    .thank__you__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &__content {
+    background-image: var(--color-gradient);
+    padding: 4rem;
+    border-radius: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 350px;
+    width: 80%;
+    position: relative;
+  }
+  &__title {
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  &__text {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    color: var(--color-black-dark);
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+  &__close__btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--color-gray);
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--color-black-dark);
+    }
+  }
+}

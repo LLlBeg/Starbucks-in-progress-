@@ -1,0 +1,349 @@
+.delicious {
+  padding: 0 0 8rem;
+
+  &__box__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__image__box {
+    position: relative;
+  }
+
+  &__image__background {
+    background-image: url(./../../image/delicious/backDeliciousFull.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46.5rem;
+    height: 68.4rem;
+
+    @include tablet {
+      width: 36.5rem;
+      height: 58.4rem;
+    }
+
+    @include mobile {
+      width: 26.5rem;
+      height: 48.4rem;
+    }
+
+    @include mobile-s {
+      width: 25rem;
+      height: 38.4rem;
+    }
+  }
+
+  &__image__cafe {
+    position: absolute;
+    width: 59.5rem;
+    height: 81.5rem;
+    top: -83px;
+    left: -35px;
+
+    @include tablet {
+      width: 49.5rem;
+      height: 71.5rem;
+    }
+
+    @include mobile {
+      width: 39.5rem;
+      height: 61.5rem;
+    }
+
+    @include mobile-s {
+      width: 32rem;
+      height: 51.5rem;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    width: 23.2rem;
+    height: 23.2rem;
+    top: -83px;
+    right: -45px;
+
+    @include tablet {
+      width: 17rem;
+      height: 17rem;
+      top: -62px;
+      right: -53px;
+    }
+
+    @include mobile {
+      width: 14rem;
+      height: 14rem;
+      top: -61px;
+      right: -64px;
+    }
+
+    @include mobile-s {
+      width: 14rem;
+      height: 14rem;
+      top: -81px;
+      right: -29px;
+    }
+
+    &__description {
+      position: absolute;
+      top: 12px;
+      left: 374px;
+      font-family: var(--font-family-base);
+      font-weight: 500;
+      font-size: 3.8rem;
+      line-height: 0.86;
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--color-white);
+
+      @include desktop {
+        left: 353px;
+      }
+
+      @include tablet {
+        left: 294px;
+        top: 6px;
+      }
+
+      @include mobile {
+        left: 232px;
+        top: -2px;
+      }
+
+      @include mobile-s {
+        left: 182px;
+        top: -23px;
+      }
+    }
+  }
+
+  &__box__right,
+  &__box__left {
+    flex: 1 1 50%;
+  }
+
+  &__box__left {
+    margin-right: 32.7rem;
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__box__right {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 6.5rem;
+    font-family: var(--font-family-base);
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 1.09;
+    color: var(--color-white);
+
+    @include tablet {
+      text-align: center;
+    }
+
+    > strong {
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: 8rem;
+      line-height: 1.09;
+      background: var(--color-gradient);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__description {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 7.5rem;
+    max-width: 47.5rem;
+    hyphens: auto;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.63;
+    color: var(--color-white);
+
+    @include desktop {
+      left: 35.2rem;
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__background__image__button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./../../image/delicious/cafeCookingFull.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 44.7rem;
+    height: 27.5rem;
+
+    @include tablet {
+      margin: 0 auto;
+      align-items: end;
+    }
+  }
+
+  &_button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2rem 7rem;
+    border-width: 1px;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 1.46;
+    color: var(--color-white);
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 5rem;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    @include tablet {
+      padding: 2rem 5rem;
+    }
+
+    > svg {
+      margin-right: 1rem;
+    }
+    &:hover {
+      background-position: 100% 0;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      .delicious_button__tooltip-1 {
+        top: -85%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        @include tablet {
+          top: -70%;
+        }
+      }
+      .delicious_button__tooltip-2 {
+        left: -28%;
+        top: 15%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        @include tablet {
+          top: -170%;
+          left: 164px;
+        }
+
+        @include mobile {
+          left: 150px;
+        }
+
+        @include mobile-s {
+          left: 135px;
+        }
+      }
+      .delicious_button__tooltip-3 {
+        top: 120%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        @include tablet {
+          top: -270%;
+          left: 164px;
+        }
+
+        @include mobile {
+          left: 150px;
+        }
+
+        @include mobile-s {
+          left: 135px;
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.color-1 {
+      background-image: var(--color-gradient-hover);
+      box-shadow: var(--box-shadow);
+    }
+
+    &__tooltip-1,
+    &__tooltip-2,
+    &__tooltip-3 {
+      position: absolute;
+      transform: translateX(-50%);
+      font-weight: 400;
+      font-size: 1.6rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+      border-radius: 5rem;
+      background: #ffdb0f;
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.62),
+        inset 0px -2px 3px rgba(0, 0, 0, 0.48), inset 1px 1px 4px #ffffff,
+        rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      min-width: 18rem;
+      padding: 8px;
+      background-image: var(--color-gradient-hover);
+      font-family: var(--font-family-base);
+      cursor: pointer;
+    }
+
+    &__tooltip-1 {
+      top: 0%;
+      left: 50%;
+      width: 20rem;
+
+      @include tablet {
+      }
+    }
+
+    &__tooltip-2 {
+      left: 100%;
+
+      @include tablet {
+        top: 0%;
+        left: 50%;
+        width: 20rem;
+      }
+    }
+
+    &__tooltip-3 {
+      top: 0%;
+      left: 50%;
+
+      @include tablet {
+        top: 0%;
+        left: 50%;
+        width: 20rem;
+      }
+    }
+  }
+}

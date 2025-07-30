@@ -1,0 +1,37 @@
+:root {
+  --color-black-dark: rgba(18, 21, 23, 1);
+  --color-black: rgba(0, 0, 0, 0);
+  --color-gray: #bbb3b3;
+  --color-gray-dark: rgba(187, 179, 179, 0.43);
+  --color-gray-light: rgba(217, 217, 217, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-green: rgba(35, 114, 73, 1);
+  --color-green-alt: rgba(23, 168, 108, 0.75);
+  --color-gradient: linear-gradient(263.46deg, #237249 3.14%, #35c66b 87.2%);
+  --color-gradient-header: linear-gradient(#818589 50%, #35c66b 50%);
+  --color-gradient-hover: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+
+  --box-shadow: 0 4px 15px 0 var(--color-green-alt);
+
+  --font-family-base: "Montserrat", sans-serif;
+
+  --container-width: 130rem;
+  --container-padding-x: 2rem;
+
+  --section-padding-y: 5rem;
+  --transition-duration: 0.3s;
+
+  --card-perspective: 70rem;
+  --card-z-offset: 12px;
+  --card-y-offset: 7px;
+  --card-max-z-index: 100;
+  --card-swap-duration: 0.3s;
+  --swipe-x: 0px;
+  --swipe-rotate: 0deg;
+}
