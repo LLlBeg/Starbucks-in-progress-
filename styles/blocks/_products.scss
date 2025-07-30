@@ -1,32 +1,36 @@
 .products {
-  padding: 20px 20px 100px;
+  padding: rem(20) rem(20) rem(20);
   &__info__items {
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: rem(60);
 
     @include desktop {
       flex-direction: column;
     }
-  }
-  &__info__title {
-    max-width: 382px;
-    margin-right: 100px;
-    font-family: var(--font-family-base);
-    font-weight: 800;
-    font-size: 5rem;
-    line-height: 109%;
-    color: var(--color-white);
 
     @include tablet {
+      margin-bottom: rem(0);
+    }
+  }
+  &__info__title {
+    max-width: rem(382);
+    margin-right: rem(100);
+    font-family: var(--font-family-base);
+    font-weight: 800;
+    font-size: rem(50);
+    line-height: 1.09;
+    color: var(--color-white);
+
+    @include desktop {
       text-align: center;
-      margin-bottom: 40px;
-      margin-right: 0px;
-      font-size: 4rem;
+      margin-bottom: rem(40);
+      margin-right: rem(0);
+      font-size: rem(70);
     }
 
     @include mobile {
-      font-size: 3.5rem;
+      font-size: rem(58);
     }
     > strong {
       background: var(--color-gradient);
@@ -35,11 +39,11 @@
     }
   }
   &__info__description {
-    max-width: 465px;
+    max-width: rem(465);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 20px;
-    line-height: 163%;
+    font-size: rem(20);
+    line-height: 1.63;
     color: var(--color-white);
     list-style: none;
     position: relative;
@@ -48,13 +52,13 @@
 
     @include tablet {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: rem(60);
     }
   }
   &__info__box {
     display: flex;
     justify-content: space-around;
-    column-gap: 40px;
+    column-gap: rem(40);
 
     @include desktop {
       flex-wrap: wrap;
@@ -67,18 +71,18 @@
     }
   }
   &__info__card {
-    max-width: 450px;
+    max-width: rem(450);
     color: var(--color-white);
     position: relative;
     transition: all 0.5s ease-out;
-    border-radius: 30px;
+    border-radius: rem(30);
     box-shadow: var(--color-gray) 6px 2px 16px 0px,
       var(--color-gray) -6px -2px 16px 0px;
     // &:not(:last-child) {
     //   margin-right: 30px;
     // }
     @include desktop {
-      margin-bottom: 20px;
+      margin-bottom: rem(20);
     }
     &:hover {
       transform: scale(1.02);
@@ -90,50 +94,50 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      bottom: 100px;
+      bottom: rem(100);
     }
     &__title {
-      margin-bottom: 20px;
+      margin-bottom: rem(20);
       font-family: var(--font-family-base);
       font-weight: 500;
-      font-size: 36px;
-      line-height: 163%;
+      font-size: rem(36);
+      line-height: 1.63;
       color: var(--color-white);
     }
     &__subtitle {
       margin-bottom: 10px;
       font-family: var(--font-family-base);
       font-weight: 400;
-      font-size: 26px;
-      line-height: 163%;
+      font-size: rem(26);
+      line-height: 1.63;
       text-align: center;
       color: var(--color-gray);
     }
     &__cost {
       display: flex;
       justify-content: space-between;
-      width: 200px;
+      width: rem(200);
       align-items: center;
     }
     &__cost {
-      margin-bottom: 20px;
+      margin-bottom: rem(20);
     }
     &__price {
       font-family: var(--font-family-base);
       font-weight: 500;
-      font-size: 32px;
-      line-height: 163%;
+      font-size: rem(32);
+      line-height: 1.63;
       color: var(--color-white);
     }
     &__capacity {
       font-family: var(--font-family-base);
       font-weight: 400;
-      font-size: 20px;
-      line-height: 163%;
+      font-size: rem(20);
+      line-height: 1.63;
       color: var(--color-gray);
     }
     &__button {
-      padding: 10px;
+      padding: rem(10);
       &.color-1 {
         background-image: var(--color-gradient-hover);
         box-shadow: var(--box-shadow);
@@ -150,41 +154,49 @@
     }
     &__button {
       width: 80%;
-      margin-bottom: 15px;
-      padding: 12px 40px;
-      border-radius: 30px;
-      border-width: 1px;
+      margin-bottom: rem(15);
+      padding: rem(12) rem(40);
+      border-radius: rem(30);
+      border-width: rem(1);
       font-family: var(--font-family-base);
       font-weight: 400;
-      font-size: 24px;
-      line-height: 146%;
+      font-size: rem(24);
+      line-height: 1.46;
       color: var(--color-white);
       text-align: center;
       border: none;
       background-size: 300% 100%;
-      border-radius: 50px;
+      border-radius: rem(50);
       -o-transition: all 0.4s ease-in-out;
       -webkit-transition: all 0.4s ease-in-out;
       transition: all 0.4s ease-in-out;
       cursor: pointer;
+
+      @include mobile {
+        font-size: rem(20);
+      }
+
+      @include mobile-s {
+        width: 90%;
+        font-size: rem(16);
+      }
     }
   }
   &__info__image__box {
     text-align: center;
-    height: 350px;
+    height: rem(350);
   }
   &__info__image {
     position: relative;
-    margin-bottom: 20px;
-    min-width: 250px;
-    border-radius: 16px;
+    margin-bottom: rem(20);
+    border-radius: rem(16);
     overflow: hidden;
     transform: scale(1);
     transition: all 0.5s ease-out;
     &::after {
       content: "";
       background-image: linear-gradient(360deg, black, transparent);
-      height: 150px;
+      height: rem(150);
       bottom: 0;
       width: 100%;
       position: absolute;
@@ -194,34 +206,35 @@
   .mobile__stack {
     display: flex;
     justify-content: center;
-    width: 45rem;
-    height: 64rem;
+    width: rem(450);
+    height: rem(700);
     margin: 0 auto;
+    margin-bottom: rem(100);
     user-select: none;
     touch-action: none;
     transform-style: preserve-3d;
 
     @include mobile {
-      width: 35rem;
-      height: 54rem;
       flex-direction: column;
+      width: rem(350);
     }
 
     @include mobile-s {
-      width: 30rem;
-      height: 54rem;
+      width: rem(280);
     }
   }
 
   .card {
     cursor: grab;
-    padding: 2rem;
+    padding: rem(20);
     background-color: var(--color-green);
-    width: 100vw;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    width: calc(100% - 10%);
     position: absolute;
-    border-radius: 30px;
+    border-radius: rem(30);
     z-index: calc(var(--card-max-z-index) - var(--i));
     transform: perspective(var(--card-perspective))
       translateZ(calc(-1 * var(--card-z-offset) * var(--i)))
@@ -231,7 +244,6 @@
     will-change: transform;
     box-shadow: var(--color-gray) 6px 2px 16px 0px,
       var(--color-gray) -6px -2px 16px 0px;
-    margin-bottom: 2rem;
   }
 
   .card:active {

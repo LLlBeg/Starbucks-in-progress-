@@ -1,5 +1,5 @@
 .delicious {
-  padding: 0 0 8rem;
+  padding: 0 0 rem(8);
 
   &__box__item {
     display: flex;
@@ -21,105 +21,106 @@
     background-image: url(./../../image/delicious/backDeliciousFull.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 46.5rem;
-    height: 68.4rem;
+    width: rem(465);
+    height: rem(684);
 
     @include tablet {
-      width: 36.5rem;
-      height: 58.4rem;
+      width: rem(365);
+      height: rem(584);
     }
 
     @include mobile {
-      width: 26.5rem;
-      height: 48.4rem;
+      width: rem(265);
+      height: rem(484);
     }
 
     @include mobile-s {
-      width: 25rem;
-      height: 38.4rem;
+      width: rem(250);
+      height: rem(384);
     }
   }
 
   &__image__cafe {
     position: absolute;
-    width: 59.5rem;
-    height: 81.5rem;
-    top: -83px;
-    left: -35px;
+    width: rem(595);
+    height: rem(815);
+    top: rem(-83);
+    left: rem(-35);
 
     @include tablet {
-      width: 49.5rem;
-      height: 71.5rem;
+      width: rem(495);
+      height: rem(715);
     }
 
     @include mobile {
-      width: 39.5rem;
-      height: 61.5rem;
+      width: rem(395);
+      height: rem(615);
     }
 
     @include mobile-s {
-      width: 32rem;
-      height: 51.5rem;
+      width: rem(320);
+      height: rem(515);
     }
   }
 
   &__star {
     position: absolute;
-    width: 23.2rem;
-    height: 23.2rem;
-    top: -83px;
-    right: -45px;
+    width: rem(232);
+    height: rem(232);
+    top: rem(-83);
+    right: rem(-45);
 
     @include tablet {
-      width: 17rem;
-      height: 17rem;
-      top: -62px;
-      right: -53px;
+      width: rem(170);
+      height: rem(170);
+      top: rem(-62);
+      right: rem(-53);
     }
 
     @include mobile {
-      width: 14rem;
-      height: 14rem;
-      top: -61px;
-      right: -64px;
+      width: rem(140);
+      height: rem(140);
+      top: rem(-61);
+      right: rem(-64);
     }
 
     @include mobile-s {
-      width: 14rem;
-      height: 14rem;
-      top: -81px;
-      right: -29px;
+      width: rem(140);
+      height: rem(140);
+      top: rem(-81);
+      right: rem(-29);
     }
 
     &__description {
       position: absolute;
-      top: 12px;
-      left: 374px;
+      top: rem(12);
+      left: rem(374);
       font-family: var(--font-family-base);
       font-weight: 500;
-      font-size: 3.8rem;
+      font-size: rem(38);
       line-height: 0.86;
       text-align: center;
       text-transform: uppercase;
       color: var(--color-white);
 
       @include desktop {
-        left: 353px;
+        left: rem(353);
       }
 
       @include tablet {
-        left: 294px;
-        top: 6px;
+        font-size: rem(25);
+        left: rem(305);
+        top: rem(7);
       }
 
       @include mobile {
-        left: 232px;
-        top: -2px;
+        left: rem(232);
+        top: rem(-2);
       }
 
       @include mobile-s {
-        left: 182px;
-        top: -23px;
+        left: rem(182);
+        top: rem(-23);
       }
     }
   }
@@ -130,11 +131,11 @@
   }
 
   &__box__left {
-    margin-right: 32.7rem;
+    margin-right: rem(327);
 
     @include desktop {
       margin-right: 0;
-      margin-bottom: 4rem;
+      margin-bottom: rem(40);
     }
   }
 
@@ -143,21 +144,26 @@
   }
 
   &__title {
-    margin-bottom: 6.5rem;
+    margin-bottom: rem(65);
     font-family: var(--font-family-base);
     font-weight: 800;
-    font-size: 8rem;
+    font-size: rem(80);
     line-height: 1.09;
     color: var(--color-white);
 
-    @include tablet {
+    @include desktop {
       text-align: center;
+      font-size: rem(70);
+    }
+
+    @include mobile {
+      font-size: rem(58);
     }
 
     > strong {
       font-family: var(--font-family-base);
       font-weight: 800;
-      font-size: 8rem;
+      font-size: 100%;
       line-height: 1.09;
       background: var(--color-gradient);
       background-clip: text;
@@ -168,17 +174,17 @@
   &__description {
     display: inline-block;
     text-align: left;
-    margin-bottom: 7.5rem;
-    max-width: 47.5rem;
+    margin-bottom: rem(75);
+    max-width: rem(475);
     hyphens: auto;
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: rem(20);
     line-height: 1.63;
     color: var(--color-white);
 
     @include desktop {
-      left: 35.2rem;
+      left: rem(352);
     }
 
     @include tablet {
@@ -194,8 +200,8 @@
     background-image: url(./../../image/delicious/cafeCookingFull.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 44.7rem;
-    height: 27.5rem;
+    max-width: rem(447);
+    height: rem(275);
 
     @include tablet {
       margin: 0 auto;
@@ -207,27 +213,31 @@
     position: absolute;
     display: flex;
     align-items: center;
-    padding: 2rem 7rem;
-    border-width: 1px;
+    padding: rem(20) rem(70);
+    border-width: rem(1);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: rem(24);
     line-height: 1.46;
     color: var(--color-white);
     text-align: center;
     border: none;
     background-size: 300% 100%;
-    border-radius: 5rem;
+    border-radius: rem(50);
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
     @include tablet {
-      padding: 2rem 5rem;
+      padding: rem(20) rem(50);
+    }
+
+    @include mobile {
+      font-size: rem(18);
     }
 
     > svg {
-      margin-right: 1rem;
+      margin-right: rem(5);
     }
     &:hover {
       background-position: 100% 0;
@@ -246,22 +256,22 @@
       }
       .delicious_button__tooltip-2 {
         left: -28%;
-        top: 15%;
+        top: 26%;
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
 
         @include tablet {
           top: -170%;
-          left: 164px;
+          left: rem(164);
         }
 
         @include mobile {
-          left: 150px;
+          left: rem(140);
         }
 
         @include mobile-s {
-          left: 135px;
+          left: rem(141);
         }
       }
       .delicious_button__tooltip-3 {
@@ -271,15 +281,15 @@
         pointer-events: auto;
         @include tablet {
           top: -270%;
-          left: 164px;
+          left: rem(164);
         }
 
         @include mobile {
-          left: 150px;
+          left: rem(140);
         }
 
         @include mobile-s {
-          left: 135px;
+          left: rem(141);
         }
       }
     }
@@ -299,18 +309,18 @@
       position: absolute;
       transform: translateX(-50%);
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: rem(16);
       opacity: 0;
       pointer-events: none;
       transition: all 0.3s;
-      border-radius: 5rem;
+      border-radius: rem(50);
       background: #ffdb0f;
       box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.62),
         inset 0px -2px 3px rgba(0, 0, 0, 0.48), inset 1px 1px 4px #ffffff,
         rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-      min-width: 18rem;
-      padding: 8px;
+      min-width: rem(180);
+      padding: rem(8);
       background-image: var(--color-gradient-hover);
       font-family: var(--font-family-base);
       cursor: pointer;
@@ -319,7 +329,7 @@
     &__tooltip-1 {
       top: 0%;
       left: 50%;
-      width: 20rem;
+      width: rem(200);
 
       @include tablet {
       }
@@ -331,7 +341,7 @@
       @include tablet {
         top: 0%;
         left: 50%;
-        width: 20rem;
+        width: rem(200);
       }
     }
 
@@ -342,7 +352,7 @@
       @include tablet {
         top: 0%;
         left: 50%;
-        width: 20rem;
+        width: rem(200);
       }
     }
   }

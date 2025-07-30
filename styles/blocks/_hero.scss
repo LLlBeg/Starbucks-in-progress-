@@ -1,8 +1,8 @@
 .hero {
-  padding-bottom: 10rem;
+  padding-bottom: rem(100);
 
   @include tablet {
-    padding-bottom: 14rem;
+    padding-bottom: rem(140);
   }
 
   &__item {
@@ -16,21 +16,21 @@
   }
 
   &__box__title {
-    margin-bottom: 5.4rem;
+    margin-bottom: rem(54);
     font-family: var(--font-family-base);
     font-weight: 800;
-    font-size: 8rem;
+    font-size: rem(80);
     line-height: 1.09;
     color: var(--color-white);
 
     @include desktop {
       text-align: center;
-      // font-size: 6rem;
+      font-size: rem(70);
     }
 
-    // @include mobile {
-    //   font-size: 5rem;
-    // }
+    @include mobile {
+      font-size: rem(58);
+    }
   }
 
   &__box__name {
@@ -40,10 +40,10 @@
   }
 
   &__box_description {
-    margin-bottom: 5.4rem;
+    margin-bottom: rem(54);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: rem(20);
     line-height: 1.63;
     hyphens: auto;
     color: var(--color-white);
@@ -70,61 +70,61 @@
     @include tablet {
       display: flex;
       flex-direction: column;
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
     }
   }
 
   &__button__left {
     display: inline-block;
-    margin-bottom: 6rem;
-    margin-right: 2rem;
-    padding: 2rem 8rem;
-    border-width: 1px;
+    margin-bottom: rem(60);
+    margin-right: rem(20);
+    padding: rem(20) rem(80);
+    border-width: rem(1);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: rem(24);
     line-height: 1.46;
     color: var(--color-white);
     text-align: center;
     border: none;
     background-size: 300% 100%;
-    border-radius: 5rem;
+    border-radius: rem(50);
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
     @include tablet {
       margin-right: 0;
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
     }
 
     @include mobile {
-      font-size: 2rem;
+      font-size: rem(20);
     }
   }
 
   &__button__right {
-    padding: 2rem 5.5rem;
-    border-width: 1px;
+    padding: rem(20) rem(55);
+    border-width: rem(1);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2.4rem;
+    font-size: rem(24);
     line-height: 1.46;
     color: var(--color-white);
     text-align: center;
     border: none;
     background-size: 300% 100%;
-    border-radius: 5rem;
+    border-radius: rem(50);
     -o-transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 
     @include tablet {
-      margin-bottom: 2rem;
+      margin-bottom: rem(20);
     }
 
     @include mobile {
-      font-size: 2rem;
+      font-size: rem(20);
     }
   }
 
@@ -149,19 +149,19 @@
 
   &__information {
     display: flex;
-    margin-bottom: 11rem;
-    column-gap: 8rem;
+    margin-bottom: rem(110);
+    column-gap: rem(80);
 
     @include tablet {
       flex-wrap: wrap;
       justify-content: center;
-      column-gap: 4rem;
-      margin-bottom: 4rem;
+      column-gap: rem(40);
+      margin-bottom: rem(60);
     }
 
     &__card {
-      width: 12.6rem;
-      height: 12.6rem;
+      width: rem(126);
+      height: rem(126);
     }
 
     &__number {
@@ -172,13 +172,13 @@
     &__info {
       font-family: var(--font-family-base);
       font-weight: 400;
-      font-size: 6.2rem;
+      font-size: rem(62);
       line-height: 1.09;
       color: var(--color-white);
       &__letter {
         font-family: var(--font-family-base);
         font-weight: 400;
-        font-size: 6.2rem;
+        font-size: rem(62);
         line-height: 1.09;
         letter-spacing: -3%;
         color: var(--color-white);
@@ -189,7 +189,7 @@
       font-family: var(--font-family-base);
       font-weight: 400;
       font-style: Regular;
-      font-size: 6.2rem;
+      font-size: rem(62);
       line-height: 1.09;
       background: linear-gradient(263.46deg, #237249 3.14%, #35c66b 87.2%);
       background-clip: text;
@@ -199,7 +199,7 @@
     &__description {
       font-family: var(--font-family-base);
       font-weight: 400;
-      font-size: 2rem;
+      font-size: rem(20);
       line-height: 1.44;
       color: var(--color-gray-dark);
     }
@@ -215,113 +215,113 @@
     background-image: url(./../../image/hero/coffe_cup_2.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 46.8rem;
-    height: 62.8rem;
+    width: rem(468);
+    height: rem(628);
 
     @include desktop {
-      margin-bottom: 4rem;
+      margin-bottom: rem(60);
     }
 
     @include mobile {
       background-size: auto;
       background-position: center;
-      width: 25.6rem;
-      height: 34.4rem;
+      width: rem(256);
+      height: rem(344);
     }
   }
 
   &__background__discount {
     position: absolute;
-    bottom: 430px;
-    right: 22px;
+    bottom: rem(430);
+    right: rem(22);
     color: var(--color-white);
     transform: rotate(-30deg);
 
     @include mobile {
-      width: 15rem;
-      height: 15rem;
-      bottom: 226px;
-      right: 0px;
+      width: rem(150);
+      height: rem(150);
+      bottom: rem(226);
+      right: rem(0);
     }
   }
 
   &__background__text {
     position: absolute;
     display: inline-flex;
-    bottom: 505px;
-    right: 126px;
+    bottom: rem(505);
+    right: rem(126);
     font-family: var(--font-family-base);
     font-weight: 500;
-    font-size: 5.6rem;
+    font-size: rem(56);
     line-height: 1.46;
     color: var(--color-white);
     transform: rotate(-22deg);
 
     @include mobile {
-      bottom: 275px;
-      right: 67px;
-      font-size: 2.7rem;
+      bottom: rem(275);
+      right: rem(67);
+      font-size: rem(40);
     }
   }
 
   &__background__percent {
     position: absolute;
     display: inline-flex;
-    bottom: 528px;
-    right: 80px;
+    bottom: rem(528);
+    right: rem(80);
     font-family: var(--font-family-base);
     font-weight: 500;
-    font-size: 5.6rem;
+    font-size: rem(56);
     line-height: 1.46;
     color: var(--color-white);
     transform: rotate(-17deg);
 
     @include mobile {
-      bottom: 293px;
-      right: 33px;
-      font-size: 2.7rem;
+      bottom: rem(293);
+      right: rem(33);
+      font-size: rem(40);
     }
   }
 
   &__background__top__blur {
     position: absolute;
-    right: 151px;
-    bottom: 265px;
+    right: rem(151);
+    bottom: rem(265);
     z-index: -1;
     width: 100%;
 
     @include mobile {
-      right: 97px;
-      bottom: 137px;
+      right: rem(97);
+      bottom: rem(137);
     }
   }
 
   &__background__bottom__blur {
     position: absolute;
-    left: 88px;
-    top: 279px;
+    left: rem(88);
+    top: rem(279);
     z-index: -2;
     width: 100%;
 
     @include mobile {
-      left: 44px;
-      top: 163px;
+      left: rem(44);
+      top: rem(163);
     }
 
     @include mobile-s {
-      left: 30px;
-      top: 161px;
+      left: rem(30);
+      top: ewm(161);
     }
   }
 
   &__customer__info {
     position: relative;
     margin: 0 auto;
-    padding: 2.5rem 0;
-    max-width: 103.9rem;
-    min-height: 40rem;
+    padding: rem(24) 0;
+    max-width: rem(1039);
+    min-height: rem(400);
     opacity: 1;
-    border-radius: 5rem;
+    border-radius: rem(50);
     background-color: var(--color-white);
   }
 
@@ -347,50 +347,50 @@
 
   &__customer__background {
     display: inline-block;
-    width: 14.8rem;
-    height: 14.8rem;
+    width: rem(148);
+    height: rem(148);
     background-color: #0ba360;
     border-radius: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: rem(50);
     cursor: pointer;
   }
 
   &__customer__image-1 {
     position: relative;
-    left: 0.5rem;
-    bottom: 1.5rem;
+    left: rem(5);
+    bottom: rem(15);
     object-fit: cover;
   }
 
   &__customer__image-2 {
     position: relative;
-    left: -47px;
-    bottom: 15px;
+    left: rem(-47);
+    bottom: rem(15);
     object-fit: cover;
   }
 
   &__customer__image-3 {
     position: relative;
-    left: -32px;
-    bottom: -6px;
+    left: rem(-32);
+    bottom: rem(-6);
     object-fit: cover;
   }
 
   &__customer__subtitle {
-    margin-bottom: 1rem;
+    margin-bottom: rem(10);
     text-align: center;
     font-family: var(--font-family-base);
     font-weight: 500;
-    font-size: 3.2rem;
+    font-size: rem(32);
     line-height: 1.63;
     color: var(--color-black-dark);
   }
 
   &__customer__description {
-    width: 22rem;
+    width: rem(220);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: rem(20);
     line-height: 1.63;
     text-align: center;
     color: var(--color-black-dark);
@@ -403,39 +403,43 @@
 
   &__customer__star {
     position: absolute;
-    bottom: 301px;
-    left: -36px;
-    width: 17.8rem;
-    height: 17.8rem;
-
-    @include mobile {
-      bottom: 586px;
-      left: -67px;
-    }
+    bottom: rem(296);
+    left: rem(-36);
+    width: rem(178);
+    height: rem(178);
 
     @include tablet {
-      top: -57px;
-      left: -41px;
-      width: 14rem;
-      height: 14rem;
+      top: rem(-59);
+      left: rem(-35);
+      width: rem(140);
+      height: rem(140);
+    }
+
+    @include mobile {
+      left: rem(-35);
     }
 
     &__descr {
       position: absolute;
-      top: -35px;
-      left: 12px;
+      top: rem(-30);
+      left: rem(12);
       font-family: var(--font-family-base);
       font-weight: 500;
-      font-size: 3.2rem;
+      font-size: rem(32);
       line-height: 0.86;
       text-align: center;
       text-transform: uppercase;
       color: var(--color-white);
 
       @include tablet {
-        top: -22px;
-        left: -3px;
-        font-size: 1.5rem;
+        top: rem(-24);
+        left: rem(3);
+        font-size: rem(24);
+      }
+
+      @include mobile {
+        top: rem(-22);
+        left: rem(3);
       }
     }
   }

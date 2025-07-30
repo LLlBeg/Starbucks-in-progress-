@@ -187,75 +187,181 @@ function o(t) {
 
 // Дивимось ширину екрана для спрацювання свайпера і кидаємо класс на тег
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   // 1. Отримуємо всі елементи, які мають клас 'products__info__box'
+//   const productInfoBoxes = document.querySelectorAll(".products__info__box");
+//   const productInfoCards = document.querySelectorAll(".products__info__card");
+
+//   // 2. Визначаємо функцію, яка буде керувати додаванням/видаленням класів
+//   function toggleClassesBasedOnWidth() {
+//     if (window.innerWidth <= 1000) {
+//       // Екран менше або дорівнює 768px (мобільний/планшет)
+//       productInfoBoxes.forEach((box) => {
+//         box.classList.remove("products__info__box");
+//         box.classList.add("mobile__stack");
+//       });
+//       productInfoCards.forEach((box) => {
+//         box.classList.remove("products__info__card");
+//         box.classList.add("card");
+//       });
+//       // productInfoCards.forEach((box) => {
+//       //   box.classList.remove("card");
+//       //   box.classList.add("mobile__card");
+//       // });
+//     } else {
+//       // Екран більше 768px (десктоп)
+//       productInfoBoxes.forEach((box) => {
+//         box.classList.remove("mobile__stack");
+//         box.classList.add("products__info__box");
+//       });
+//       productInfoCards.forEach((box) => {
+//         box.classList.remove("card");
+//         box.classList.add("products__info__card");
+//       });
+//       // productInfoCards.forEach((box) => {
+//       //   box.classList.remove("mobile__card");
+//       //   box.classList.add("card");
+//       // });
+//     }
+//   }
+
+//   // 3. Викликаємо функцію один раз при завантаженні сторінки,
+//   // щоб встановити правильні класи одразу.
+//   toggleClassesBasedOnWidth();
+
+//   window.addEventListener("resize", toggleClassesBasedOnWidth);
+
+//   // І ще раз викликаємо, щоб встановити початковий стан
+//   toggleClassesBasedOnWidth();
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const cardStack = document.querySelector(".mobile__stack");
+//   let cards = [...document.querySelectorAll(".card")];
+//   let isSwiping = false;
+//   let startX = 0;
+//   let currentX = 0;
+//   let animationFrameId = null;
+
+//   const getDurationFromCSS = (
+//     variableName,
+//     element = document.documentElement
+//   ) => {
+//     const value = getComputedStyle(element)
+//       ?.getPropertyValue(variableName)
+//       ?.trim();
+//     if (!value) return 0;
+//     if (value.endsWith("ms")) return parseFloat(value);
+//     if (value.endsWith("s")) return parseFloat(value) * 1000;
+//     return parseFloat(value) || 0;
+//   };
+
+//   const getActiveCard = () => cards[0];
+
+//   const updatePositions = () => {
+//     cards.forEach((card, i) => {
+//       card.style.setProperty("--i", i + 1);
+//       card.style.setProperty("--swipe-x", "0px");
+//       card.style.setProperty("--swipe-rotate", "0deg");
+//       card.style.opacity = "1";
+//     });
+//   };
+
+//   const applySwipeStyles = (deltaX) => {
+//     const card = getActiveCard();
+//     if (!card) return;
+//     card.style.setProperty("--swipe-x", `${deltaX}px`);
+//     card.style.setProperty("--swipe-rotate", `${deltaX * 0.2}deg`);
+//     card.style.opacity = 1 - Math.min(Math.abs(deltaX) / 100, 1) * 0.75;
+//   };
+
+//   const handleStart = (clientX) => {
+//     if (isSwiping) return;
+//     isSwiping = true;
+//     startX = currentX = clientX;
+//     const card = getActiveCard();
+//     card && (card.style.transition = "none");
+//   };
+
+//   const handleMove = (clientX) => {
+//     if (!isSwiping) return;
+//     cancelAnimationFrame(animationFrameId);
+//     animationFrameId = requestAnimationFrame(() => {
+//       currentX = clientX;
+//       const deltaX = currentX - startX;
+//       applySwipeStyles(deltaX);
+
+//       if (Math.abs(deltaX) > 50) handleEnd();
+//     });
+//   };
+
+//   const handleEnd = () => {
+//     if (!isSwiping) return;
+//     cancelAnimationFrame(animationFrameId);
+
+//     const deltaX = currentX - startX;
+//     const threshold = 50;
+//     const duration = getDurationFromCSS("--card-swap-duration");
+//     const card = getActiveCard();
+
+//     if (card) {
+//       card.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+
+//       if (Math.abs(deltaX) > threshold) {
+//         const direction = Math.sign(deltaX);
+
+//         card.style.setProperty("--swipe-x", `${direction * 300}px`);
+//         card.style.setProperty("--swipe-rotate", `${direction * 20}deg`);
+
+//         setTimeout(() => {
+//           card.style.setProperty("--swipe-rotate", `${-direction * 20}deg`);
+//         }, duration * 0.5);
+
+//         setTimeout(() => {
+//           cards = [...cards.slice(1), card];
+//           updatePositions();
+//         }, duration);
+//       } else {
+//         applySwipeStyles(0);
+//       }
+//     }
+
+//     isSwiping = false;
+//     startX = currentX = 0;
+//   };
+
+//   const addEventListeners = () => {
+//     cardStack?.addEventListener("pointerdown", ({ clientX }) =>
+//       handleStart(clientX)
+//     );
+//     cardStack?.addEventListener("pointermove", ({ clientX }) =>
+//       handleMove(clientX)
+//     );
+//     cardStack?.addEventListener("pointerup", handleEnd);
+//   };
+
+//   updatePositions();
+//   addEventListeners();
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Отримуємо всі елементи, які мають клас 'products__info__box'
-  const productInfoBoxes = document.querySelectorAll(".products__info__box");
-  const productInfoCards = document.querySelectorAll(".products__info__card");
+  // --- 1. Оголошення глобальних змінних та допоміжних функцій для класів та свайпу ---
+  const productCardsContainer = document.querySelector(".products__info__box"); // Це твій контейнер (ul)
+  const productCardsElements = document.querySelectorAll(
+    ".products__info__card"
+  ); // Це окремі картки (li)
 
-  // 2. Визначаємо функцію, яка буде керувати додаванням/видаленням класів
-  function toggleClassesBasedOnWidth() {
-    if (window.innerWidth <= 1000) {
-      // Екран менше або дорівнює 768px (мобільний/планшет)
-      productInfoBoxes.forEach((box) => {
-        box.classList.remove("products__info__box");
-        box.classList.add("mobile__stack");
-      });
-      productInfoCards.forEach((box) => {
-        box.classList.remove("products__info__card");
-        box.classList.add("card");
-      });
-      // productInfoCards.forEach((box) => {
-      //   box.classList.remove("card");
-      //   box.classList.add("mobile__card");
-      // });
-    } else {
-      // Екран більше 768px (десктоп)
-      productInfoBoxes.forEach((box) => {
-        box.classList.remove("mobile__stack");
-        box.classList.add("products__info__box");
-      });
-      productInfoCards.forEach((box) => {
-        box.classList.remove("card");
-        box.classList.add("products__info__card");
-      });
-      // productInfoCards.forEach((box) => {
-      //   box.classList.remove("mobile__card");
-      //   box.classList.add("card");
-      // });
-    }
-  }
-
-  // 3. Викликаємо функцію один раз при завантаженні сторінки,
-  // щоб встановити правильні класи одразу.
-  toggleClassesBasedOnWidth();
-
-  // 4. Додаємо слухача подій на зміну розміру вікна.
-  // Використання window.matchMedia() більш ефективне, але для простоти прикладу
-  // можна використовувати і window.addEventListener('resize').
-  // Для великої кількості елементів і частої зміни розміру, matchMedia краще.
-
-  // Варіант А: Використання window.addEventListener('resize') (простіше, але менш оптимізовано)
-  window.addEventListener("resize", toggleClassesBasedOnWidth);
-
-  // Варіант Б: Використання window.matchMedia() (більш ефективно)
-  const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-  // Додаємо слухача до медіа-запиту
-  mediaQuery.addEventListener("change", () => {
-    toggleClassesBasedOnWidth();
-  });
-  // І ще раз викликаємо, щоб встановити початковий стан
-  toggleClassesBasedOnWidth();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const cardStack = document.querySelector(".mobile__stack");
-  let cards = [...document.querySelectorAll(".card")];
+  // Змінні для свайп-логіки
+  let cards = [...document.querySelectorAll(".card")]; // Цей масив буде містити активні картки для свайпу
   let isSwiping = false;
   let startX = 0;
   let currentX = 0;
   let animationFrameId = null;
 
+  // Медіа-запит для визначення мобільного вигляду (важливо, щоб breakpoint був коректний)
+  const mobileMediaQuery = window.matchMedia("(max-width: 1000px)"); // Змінив на 1000px, як у твоєму коді
+
+  // Helper function to get CSS variable durations
   const getDurationFromCSS = (
     variableName,
     element = document.documentElement
@@ -273,10 +379,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updatePositions = () => {
     cards.forEach((card, i) => {
-      card.style.setProperty("--i", i + 1);
+      // Set --i CSS variable for stacking/animation
+      card.style.setProperty("--i", i + 1); // Змінив на i + 1, як обговорювали
       card.style.setProperty("--swipe-x", "0px");
       card.style.setProperty("--swipe-rotate", "0deg");
-      card.style.opacity = "1";
+      card.style.opacity = "1"; // Повертаємо видимість, якщо картка повертається в стек
     });
   };
 
@@ -343,21 +450,85 @@ document.addEventListener("DOMContentLoaded", () => {
     startX = currentX = 0;
   };
 
-  const addEventListeners = () => {
-    cardStack?.addEventListener("pointerdown", ({ clientX }) =>
-      handleStart(clientX)
-    );
-    cardStack?.addEventListener("pointermove", ({ clientX }) =>
-      handleMove(clientX)
-    );
-    cardStack?.addEventListener("pointerup", handleEnd);
-  };
+  // --- 2. Основна логіка перемикання класів та активації/деактивації свайпу ---
+  function toggleMobileStackClasses(event) {
+    const isMobileView = event.matches;
 
-  updatePositions();
-  addEventListeners();
+    if (isMobileView) {
+      // Мобільний вигляд: активуємо стилі стеку
+      if (productCardsContainer) {
+        productCardsContainer.classList.add("mobile__stack");
+        productCardsContainer.classList.remove("products__info__box"); // Якщо потрібно видалити цей клас на мобільних
+      }
+
+      productCardsElements.forEach((card) => {
+        card.classList.add("card"); // Додаємо клас 'card' для 3D стилів
+        card.classList.remove("products__info__card"); // Якщо потрібно видалити цей клас на мобільних
+      });
+
+      // Наповнюємо масив 'cards' для свайп-логіки
+      cards = [...productCardsElements];
+      updatePositions(); // Ініціалізуємо --i для всіх карток
+
+      // Встановлюємо слухачі подій для свайпу
+      if (productCardsContainer) {
+        productCardsContainer.addEventListener("pointerdown", ({ clientX }) =>
+          handleStart(clientX)
+        );
+        productCardsContainer.addEventListener("pointermove", ({ clientX }) =>
+          handleMove(clientX)
+        );
+        document.addEventListener("pointerup", handleEnd); // Слухачі на document для кращого досвіду
+        document.addEventListener("pointercancel", handleEnd);
+      }
+      console.log("Mobile view active: .card class added. Swipe enabled.");
+    } else {
+      // Десктопний вигляд: деактивуємо стилі стеку
+      if (productCardsContainer) {
+        productCardsContainer.classList.remove("mobile__stack");
+        productCardsContainer.classList.add("products__info__box"); // Повертаємо цей клас на десктопі
+      }
+
+      productCardsElements.forEach((card) => {
+        card.classList.remove("card"); // Видаляємо клас 'card'
+        card.classList.add("products__info__card"); // Повертаємо цей клас на десктопі
+
+        // Очищаємо інлайн-стилі, додані JS, щоб вони не заважали
+        card.style.removeProperty("--i");
+        card.style.removeProperty("--swipe-x");
+        card.style.removeProperty("--swipe-rotate");
+        card.style.removeProperty("opacity");
+        card.style.removeProperty("transition");
+      });
+
+      cards = []; // Очищаємо масив 'cards'
+      // Видаляємо слухачі подій свайпу
+      if (productCardsContainer) {
+        productCardsContainer.removeEventListener(
+          "pointerdown",
+          ({ clientX }) => handleStart(clientX)
+        );
+        productCardsContainer.removeEventListener(
+          "pointermove",
+          ({ clientX }) => handleMove(clientX)
+        );
+        document.removeEventListener("pointerup", handleEnd);
+        document.removeEventListener("pointercancel", handleEnd);
+      }
+      console.log("Desktop view active: .card class removed. Swipe disabled.");
+    }
+  }
+
+  // --- 3. Ініціалізація: встановлюємо початковий стан та слухачі ---
+  // Додаємо слухач для зміни медіа-запиту
+  mobileMediaQuery.addEventListener("change", toggleMobileStackClasses);
+
+  // Викликаємо функцію один раз на завантаження сторінки, щоб встановити початковий стан
+  toggleMobileStackClasses(mobileMediaQuery);
+
+  // --- Твій інший існуючий JavaScript-код має йти далі тут ---
+  // Наприклад:
+  // const popupBtn = document.querySelectorAll(".openPopupBtn");
+  // const popup = document.querySelector(".popup");
+  // ... і так далі, весь твій код для попапів, меню тощо.
 });
-//
-//
-//
-//
-//
