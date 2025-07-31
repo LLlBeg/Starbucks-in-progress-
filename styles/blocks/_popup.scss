@@ -1,8 +1,8 @@
 //
 .popup {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: rem(0);
+  left: rem(0);
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -23,10 +23,10 @@
   }
   &__content {
     background-image: var(--color-gradient);
-    padding: 3rem;
-    border-radius: 3rem;
+    padding: rem(30);
+    border-radius: rem(30);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    max-width: 550px;
+    max-width: rem(550);
     width: 90%;
     transform: scale(0.9);
     opacity: 0;
@@ -35,9 +35,9 @@
   }
   &__close__btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2.8rem;
+    top: rem(15);
+    right: rem(20);
+    font-size: rem(28);
     cursor: pointer;
     color: var(--color-gray);
     transition: color 0.2s ease;
@@ -47,36 +47,36 @@
   }
   &__title {
     color: var(--color-black-dark);
-    margin-bottom: 2.6rem;
+    margin-bottom: rem(26);
     text-align: center;
     font-family: var(--font-family-base);
     font-weight: 400;
   }
 }
 .form__group {
-  margin-bottom: 1.5rem;
+  margin-bottom: rem(15);
 }
 .form__label {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: rem(10);
   font-family: var(--font-family-base);
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: rem(24);
   color: var(--color-black-dark);
 }
 .form__input {
   width: calc(100% - 20px);
-  padding: 1.2rem;
-  margin-bottom: 1.8rem;
+  padding: rem(12);
+  margin-bottom: rem(18);
   border: 1px solid #ddd;
-  border-radius: 3rem;
+  border-radius: rem(30);
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: rem(16);
   &::placeholder {
     color: var(--color-green);
     font-family: var(--font-family-base);
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: rem(16);
   }
   &:focus {
     border-color: #007bff;
@@ -86,25 +86,25 @@
 }
 .form__help__text {
   display: block;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: rem(-10);
+  margin-bottom: rem(10);
   font-family: var(--font-family-base);
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: rem(16);
   color: var(--color-black-dark);
 }
 .form__submit__button {
   width: 100%;
-  padding: 1.2rem 2rem;
+  padding: rem(12) rem(20);
   font-family: var(--font-family-base);
   font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 146%;
+  font-size: rem(24);
+  line-height: 1.46;
   color: var(--color-white);
   text-align: center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 3rem;
+  border-radius: rem(30);
   cursor: pointer;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
@@ -147,14 +147,14 @@
   }
   &__content {
     background-image: var(--color-gradient);
-    padding: 4rem;
-    border-radius: 3rem;
+    padding: rem(40);
+    border-radius: rem(30);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     transform: translateY(-20px);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    max-width: 350px;
+    max-width: rem(350);
     width: 80%;
     position: relative;
   }
@@ -162,21 +162,21 @@
     font-family: var(--font-family-base);
     font-weight: 500;
     color: var(--color-white);
-    margin-bottom: 2rem;
-    font-size: 3rem;
+    margin-bottom: rem(20);
+    font-size: rem(30);
   }
   &__text {
     font-family: var(--font-family-base);
     font-weight: 400;
     color: var(--color-black-dark);
-    font-size: 1.8rem;
+    font-size: rem(18);
     line-height: 1.6;
   }
   &__close__btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 3rem;
+    top: rem(10);
+    right: rem(15);
+    font-size: rem(30);
     cursor: pointer;
     color: var(--color-gray);
     transition: color 0.2s ease;

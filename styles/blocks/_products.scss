@@ -1,5 +1,10 @@
 .products {
-  padding: rem(20) rem(20) rem(20);
+  padding-bottom: rem(80);
+
+  @include tablet {
+    padding-bottom: rem(20);
+  }
+
   &__info__items {
     display: flex;
     align-items: center;
@@ -206,6 +211,7 @@
   .mobile__stack {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: rem(450);
     height: rem(700);
     margin: 0 auto;

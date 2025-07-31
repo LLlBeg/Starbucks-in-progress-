@@ -1,0 +1,186 @@
+.events {
+  padding-bottom: rem(100);
+
+  &__header__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: rem(54);
+
+    @include tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-base);
+    font-weight: 800;
+    font-size: rem(80);
+    line-height: 1.09;
+    color: var(--color-white);
+
+    > strong {
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: 100%;
+      line-height: 1.09;
+      background: var(--color-gradient);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include tablet {
+      margin-bottom: rem(30);
+      font-size: rem(70);
+    }
+
+    @include mobile {
+      font-size: rem(58);
+    }
+  }
+  &__subtitle {
+    max-width: rem(457);
+    margin-right: rem(72);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 1.63;
+    hyphens: auto;
+    color: var(--color-white);
+
+    @include tablet {
+      margin-right: rem(0);
+    }
+  }
+
+  &__scroller {
+    max-width: rem(1320);
+  }
+
+  &__scroller__inner {
+    padding-block: rem(10);
+    display: flex;
+    gap: rem(10);
+  }
+
+  &__scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 20%,
+      white 80%,
+      transparent
+    );
+  }
+
+  &__scroller[data-animated="true"] .events__scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+
+  &__scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+
+  &__scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+
+  &__scroller[data-speed="fast"] {
+    --_animation-duration: 30s;
+  }
+
+  &__scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  &__container__image_1,
+  &__container__image_2,
+  &__container__image_3,
+  &__container__image_4,
+  &__container__image_5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: rem(40) rem(30) rem(28);
+    background-image: url(../image/events/CoffeCupFull.webp);
+    background-repeat: no-repeat;
+    width: rem(614);
+    height: rem(260);
+    border-radius: rem(30);
+  }
+  &__container__image_2 {
+    background-image: url(../image/events/StarbuckscoffeFull.webp);
+  }
+  &__container__image_3 {
+    background-image: url(../image/events/StreetCoffeCupFull.webp);
+    width: rem(401);
+  }
+  &__container__image_4 {
+    background-image: url(../image/events/StreetLogoFull.webp);
+    width: rem(401);
+  }
+  &__container__image_5 {
+    background-image: url(../image/events/ManWithPenFull.webp);
+    width: rem(401);
+  }
+
+  &__image__title {
+    max-width: rem(290);
+    font-family: var(--font-family-base);
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 1.09;
+    color: var(--color-white);
+  }
+
+  &__image__button {
+    padding: rem(20) rem(55);
+    border-width: rem(1);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 1.46;
+    color: var(--color-white);
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: rem(50);
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background-position: 100% 0;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &.color-1 {
+      background-image: var(--color-gradient-hover);
+      box-shadow: var(--box-shadow);
+    }
+  }
+}

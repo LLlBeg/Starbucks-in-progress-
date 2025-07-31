@@ -72,78 +72,6 @@ function WindowLoad() {
 //
 //
 //
-
-// PopUp Менюха
-const openPopupButtons = document.querySelectorAll(
-  ".products__info__card__button"
-);
-const contactPopup = document.getElementById("contact__popup"); // ID remains for direct access
-const contactForm = document.getElementById("contact__form"); // ID remains for direct access
-const thankYouPopup = document.getElementById("thank__you__popup"); // ID remains for direct access
-
-// Function to open the PopUp
-function openPopup() {
-  contactPopup.classList.add("popup--active"); // Use BEM modifier
-}
-
-// Function to close the PopUp
-function closePopup() {
-  contactPopup.classList.remove("popup--active"); // Use BEM modifier
-  contactForm.reset(); // Reset form fields
-}
-
-// Function to close the Thank You PopUp
-function closeThankYouPopup() {
-  thankYouPopup.classList.remove("thank__you--active"); // Use BEM modifier
-}
-
-// Add event listener to each button with the class
-openPopupButtons.forEach((button) => {
-  button.addEventListener("click", openPopup);
-});
-
-// Close PopUp when clicking outside content
-contactPopup.addEventListener("click", function (event) {
-  if (event.target === contactPopup) {
-    closePopup();
-  }
-});
-
-// Form submission handler
-contactForm.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent default form submission
-
-  console.log("Форма відправлена!");
-  console.log("Ім'я:", document.getElementById("first__name").value);
-  console.log("Прізвище:", document.getElementById("last__name").value);
-  console.log(
-    "Номер телефону:",
-    document.getElementById("phone__number").value
-  );
-  console.log(
-    "Кількість замовлення:",
-    document.getElementById("order__quantity").value
-  );
-
-  closePopup(); // Close the contact form popup
-  thankYouPopup.classList.add("thank__you--active"); // Show thank you popup
-
-  // Optionally, close thank you popup after a few seconds
-  // setTimeout(closeThankYouPopup, 3000);
-});
-
-// Close Thank You PopUp when clicking outside content
-thankYouPopup.addEventListener("click", function (event) {
-  if (event.target === thankYouPopup) {
-    closeThankYouPopup();
-  }
-});
-//
-//
-//
-//
-//
-//
 //
 // Курсор
 document
@@ -186,163 +114,6 @@ function o(t) {
 //
 
 // Дивимось ширину екрана для спрацювання свайпера і кидаємо класс на тег
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   // 1. Отримуємо всі елементи, які мають клас 'products__info__box'
-//   const productInfoBoxes = document.querySelectorAll(".products__info__box");
-//   const productInfoCards = document.querySelectorAll(".products__info__card");
-
-//   // 2. Визначаємо функцію, яка буде керувати додаванням/видаленням класів
-//   function toggleClassesBasedOnWidth() {
-//     if (window.innerWidth <= 1000) {
-//       // Екран менше або дорівнює 768px (мобільний/планшет)
-//       productInfoBoxes.forEach((box) => {
-//         box.classList.remove("products__info__box");
-//         box.classList.add("mobile__stack");
-//       });
-//       productInfoCards.forEach((box) => {
-//         box.classList.remove("products__info__card");
-//         box.classList.add("card");
-//       });
-//       // productInfoCards.forEach((box) => {
-//       //   box.classList.remove("card");
-//       //   box.classList.add("mobile__card");
-//       // });
-//     } else {
-//       // Екран більше 768px (десктоп)
-//       productInfoBoxes.forEach((box) => {
-//         box.classList.remove("mobile__stack");
-//         box.classList.add("products__info__box");
-//       });
-//       productInfoCards.forEach((box) => {
-//         box.classList.remove("card");
-//         box.classList.add("products__info__card");
-//       });
-//       // productInfoCards.forEach((box) => {
-//       //   box.classList.remove("mobile__card");
-//       //   box.classList.add("card");
-//       // });
-//     }
-//   }
-
-//   // 3. Викликаємо функцію один раз при завантаженні сторінки,
-//   // щоб встановити правильні класи одразу.
-//   toggleClassesBasedOnWidth();
-
-//   window.addEventListener("resize", toggleClassesBasedOnWidth);
-
-//   // І ще раз викликаємо, щоб встановити початковий стан
-//   toggleClassesBasedOnWidth();
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const cardStack = document.querySelector(".mobile__stack");
-//   let cards = [...document.querySelectorAll(".card")];
-//   let isSwiping = false;
-//   let startX = 0;
-//   let currentX = 0;
-//   let animationFrameId = null;
-
-//   const getDurationFromCSS = (
-//     variableName,
-//     element = document.documentElement
-//   ) => {
-//     const value = getComputedStyle(element)
-//       ?.getPropertyValue(variableName)
-//       ?.trim();
-//     if (!value) return 0;
-//     if (value.endsWith("ms")) return parseFloat(value);
-//     if (value.endsWith("s")) return parseFloat(value) * 1000;
-//     return parseFloat(value) || 0;
-//   };
-
-//   const getActiveCard = () => cards[0];
-
-//   const updatePositions = () => {
-//     cards.forEach((card, i) => {
-//       card.style.setProperty("--i", i + 1);
-//       card.style.setProperty("--swipe-x", "0px");
-//       card.style.setProperty("--swipe-rotate", "0deg");
-//       card.style.opacity = "1";
-//     });
-//   };
-
-//   const applySwipeStyles = (deltaX) => {
-//     const card = getActiveCard();
-//     if (!card) return;
-//     card.style.setProperty("--swipe-x", `${deltaX}px`);
-//     card.style.setProperty("--swipe-rotate", `${deltaX * 0.2}deg`);
-//     card.style.opacity = 1 - Math.min(Math.abs(deltaX) / 100, 1) * 0.75;
-//   };
-
-//   const handleStart = (clientX) => {
-//     if (isSwiping) return;
-//     isSwiping = true;
-//     startX = currentX = clientX;
-//     const card = getActiveCard();
-//     card && (card.style.transition = "none");
-//   };
-
-//   const handleMove = (clientX) => {
-//     if (!isSwiping) return;
-//     cancelAnimationFrame(animationFrameId);
-//     animationFrameId = requestAnimationFrame(() => {
-//       currentX = clientX;
-//       const deltaX = currentX - startX;
-//       applySwipeStyles(deltaX);
-
-//       if (Math.abs(deltaX) > 50) handleEnd();
-//     });
-//   };
-
-//   const handleEnd = () => {
-//     if (!isSwiping) return;
-//     cancelAnimationFrame(animationFrameId);
-
-//     const deltaX = currentX - startX;
-//     const threshold = 50;
-//     const duration = getDurationFromCSS("--card-swap-duration");
-//     const card = getActiveCard();
-
-//     if (card) {
-//       card.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
-
-//       if (Math.abs(deltaX) > threshold) {
-//         const direction = Math.sign(deltaX);
-
-//         card.style.setProperty("--swipe-x", `${direction * 300}px`);
-//         card.style.setProperty("--swipe-rotate", `${direction * 20}deg`);
-
-//         setTimeout(() => {
-//           card.style.setProperty("--swipe-rotate", `${-direction * 20}deg`);
-//         }, duration * 0.5);
-
-//         setTimeout(() => {
-//           cards = [...cards.slice(1), card];
-//           updatePositions();
-//         }, duration);
-//       } else {
-//         applySwipeStyles(0);
-//       }
-//     }
-
-//     isSwiping = false;
-//     startX = currentX = 0;
-//   };
-
-//   const addEventListeners = () => {
-//     cardStack?.addEventListener("pointerdown", ({ clientX }) =>
-//       handleStart(clientX)
-//     );
-//     cardStack?.addEventListener("pointermove", ({ clientX }) =>
-//       handleMove(clientX)
-//     );
-//     cardStack?.addEventListener("pointerup", handleEnd);
-//   };
-
-//   updatePositions();
-//   addEventListeners();
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Оголошення глобальних змінних та допоміжних функцій для класів та свайпу ---
@@ -526,9 +297,112 @@ document.addEventListener("DOMContentLoaded", () => {
   // Викликаємо функцію один раз на завантаження сторінки, щоб встановити початковий стан
   toggleMobileStackClasses(mobileMediaQuery);
 
-  // --- Твій інший існуючий JavaScript-код має йти далі тут ---
-  // Наприклад:
-  // const popupBtn = document.querySelectorAll(".openPopupBtn");
-  // const popup = document.querySelector(".popup");
-  // ... і так далі, весь твій код для попапів, меню тощо.
+  //
+  //
+  //
+  //
+  //
+  //
+  //
 });
+
+// PopUp Менюха
+const openPopupButtons = document.querySelectorAll(
+  ".products__info__card__button"
+);
+const contactPopup = document.getElementById("contact__popup"); // ID remains for direct access
+const contactForm = document.getElementById("contact__form"); // ID remains for direct access
+const thankYouPopup = document.getElementById("thank__you__popup"); // ID remains for direct access
+
+// Function to open the PopUp
+function openPopup() {
+  contactPopup.classList.add("popup--active"); // Use BEM modifier
+}
+
+// Function to close the PopUp
+function closePopup() {
+  contactPopup.classList.remove("popup--active"); // Use BEM modifier
+  contactForm.reset(); // Reset form fields
+}
+
+// Function to close the Thank You PopUp
+function closeThankYouPopup() {
+  thankYouPopup.classList.remove("thank__you--active"); // Use BEM modifier
+}
+
+// Add event listener to each button with the class
+openPopupButtons.forEach((button) => {
+  button.addEventListener("click", openPopup);
+});
+
+// Close PopUp when clicking outside content
+contactPopup.addEventListener("click", function (event) {
+  if (event.target === contactPopup) {
+    closePopup();
+  }
+});
+
+// Form submission handler
+contactForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  console.log("Форма відправлена!");
+  console.log("Ім'я:", document.getElementById("first__name").value);
+  console.log("Прізвище:", document.getElementById("last__name").value);
+  console.log(
+    "Номер телефону:",
+    document.getElementById("phone__number").value
+  );
+  console.log(
+    "Кількість замовлення:",
+    document.getElementById("order__quantity").value
+  );
+
+  closePopup(); // Close the contact form popup
+  thankYouPopup.classList.add("thank__you--active"); // Show thank you popup
+
+  // Optionally, close thank you popup after a few seconds
+  // setTimeout(closeThankYouPopup, 3000);
+});
+
+// Close Thank You PopUp when clicking outside content
+thankYouPopup.addEventListener("click", function (event) {
+  if (event.target === thankYouPopup) {
+    closeThankYouPopup();
+  }
+});
+//
+//
+//
+//
+//
+//
+//
+//Безкінечний скролл фоток
+
+const scrollers = document.querySelectorAll(".events__scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".events__scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}

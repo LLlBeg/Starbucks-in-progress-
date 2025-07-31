@@ -1,5 +1,5 @@
 .delicious {
-  padding: 0 0 rem(8);
+  padding: 0 0 rem(80);
 
   &__box__item {
     display: flex;
@@ -18,7 +18,7 @@
   }
 
   &__image__background {
-    background-image: url(./../../image/delicious/backDeliciousFull.webp);
+    background-image: url(../image/delicious/backDeliciousFull.webp);
     background-repeat: no-repeat;
     background-size: cover;
     width: rem(465);
@@ -197,7 +197,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./../../image/delicious/cafeCookingFull.webp);
+    background-image: url(../image/delicious/cafeCookingFull.webp);
     background-repeat: no-repeat;
     background-size: cover;
     max-width: rem(447);
