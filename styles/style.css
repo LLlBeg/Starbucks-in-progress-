@@ -423,6 +423,7 @@ a:focus-visible {
   -webkit-text-fill-color: transparent;
 }
 .hero__box_description {
+  max-width: 35.625rem;
   margin-bottom: 3.375rem;
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -432,7 +433,7 @@ a:focus-visible {
           hyphens: auto;
   color: var(--color-white);
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .hero__box_description {
     text-align: center;
   }
@@ -1005,6 +1006,7 @@ a:focus-visible {
 }
 @media (max-width: 1280px) {
   .delicious__description {
+    text-align: center;
     left: 22rem;
   }
 }
@@ -1199,7 +1201,7 @@ a:focus-visible {
   margin-right: 6.25rem;
   font-family: var(--font-family-base);
   font-weight: 800;
-  font-size: 3.125rem;
+  font-size: 5rem;
   line-height: 1.09;
   color: var(--color-white);
 }
@@ -1235,9 +1237,13 @@ a:focus-visible {
           hyphens: auto;
   transition: all 0.5s ease-out;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .products__info__description {
     text-align: center;
+  }
+}
+@media (max-width: 1023px) {
+  .products__info__description {
     margin-bottom: 3.75rem;
   }
 }
@@ -1638,7 +1644,7 @@ a:focus-visible {
   align-items: center;
   margin-bottom: 3.375rem;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .events__header__container {
     flex-direction: column;
     text-align: center;
@@ -1661,7 +1667,7 @@ a:focus-visible {
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .events__title {
     margin-bottom: 1.875rem;
     font-size: 4.375rem;
@@ -1683,7 +1689,7 @@ a:focus-visible {
           hyphens: auto;
   color: var(--color-white);
 }
-@media (max-width: 1023px) {
+@media (max-width: 1280px) {
   .events__subtitle {
     margin-right: 0rem;
   }
@@ -1714,10 +1720,20 @@ a:focus-visible {
   --_animation-direction: forwards;
 }
 .events__scroller[data-speed=fast] {
-  --_animation-duration: 30s;
+  --_animation-duration: 20s;
 }
 .events__scroller[data-speed=slow] {
   --_animation-duration: 60s;
+}
+@media (max-width: 1023px) {
+  .events__scroller[data-speed=slow] {
+    --_animation-duration: 40s;
+  }
+}
+@media (max-width: 767px) {
+  .events__scroller[data-speed=slow] {
+    --_animation-duration: 30s;
+  }
 }
 @keyframes scroll {
   to {
@@ -1783,4 +1799,121 @@ a:focus-visible {
 .events__image__button.color-1 {
   background-image: var(--color-gradient-hover);
   box-shadow: var(--box-shadow);
+}
+
+.contacts {
+  padding-bottom: 5rem;
+}
+.contacts__info {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  .contacts__info {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1280px) {
+  .contacts__media {
+    margin-bottom: 2.5rem;
+  }
+}
+.contacts__title {
+  margin-bottom: 4.0625rem;
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1.09;
+  color: var(--color-white);
+}
+@media (max-width: 1280px) {
+  .contacts__title {
+    text-align: center;
+    font-size: 4.375rem;
+  }
+}
+@media (max-width: 767px) {
+  .contacts__title {
+    font-size: 3.625rem;
+  }
+}
+.contacts__title > strong {
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  font-size: 100%;
+  line-height: 1.09;
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contacts__subtitle {
+  margin-bottom: 3.5rem;
+  max-width: 24.1875rem;
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.63;
+  color: var(--color-white);
+}
+@media (max-width: 1280px) {
+  .contacts__subtitle {
+    text-align: center;
+  }
+}
+.contacts__box {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1280px) {
+  .contacts__box {
+    justify-content: center;
+  }
+}
+.contacts__box:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.contacts__vector {
+  margin-right: 0.9375rem;
+}
+.contacts__link {
+  height: 2.8125rem;
+  font-family: car(--font-family-base);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 2rem;
+  line-height: 1.32;
+  color: var(--color-green);
+}
+.contacts__map {
+  max-width: 100%;
+  text-align: end;
+}
+.contacts__iframe {
+  max-width: 53.125rem;
+  height: 34.6875rem;
+  border-radius: 1.875rem;
+}
+@media (max-width: 1280px) {
+  .contacts__iframe {
+    width: 37.5rem;
+  }
+}
+@media (max-width: 1023px) {
+  .contacts__iframe {
+    width: 31.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .contacts__iframe {
+    width: 21.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .contacts__iframe {
+    width: 16.875rem;
+  }
+}
+.contacts__media, .contacts__map {
+  flex: 1 1 50%;
 }/*# sourceMappingURL=style.css.map */

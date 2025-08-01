@@ -1,0 +1,119 @@
+.contacts {
+  padding-bottom: rem(80);
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+
+  &__media {
+    @include desktop {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(65);
+    font-family: var(--font-family-base);
+    font-weight: 800;
+    font-size: rem(80);
+    line-height: 1.09;
+    color: var(--color-white);
+
+    @include desktop {
+      text-align: center;
+      font-size: rem(70);
+    }
+
+    @include mobile {
+      font-size: rem(58);
+    }
+
+    > strong {
+      font-family: var(--font-family-base);
+      font-weight: 800;
+      font-size: 100%;
+      line-height: 1.09;
+      background: var(--color-gradient);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(56);
+    max-width: rem(387);
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    font-size: rem(20);
+    line-height: 1.63;
+    color: var(--color-white);
+
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      justify-content: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__vector {
+    margin-right: rem(15);
+  }
+
+  &__link {
+    height: rem(45);
+    font-family: car(--font-family-base);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: rem(32);
+    line-height: 1.32;
+    color: var(--color-green);
+  }
+
+  &__map {
+    max-width: 100%;
+    text-align: end;
+  }
+
+  &__iframe {
+    max-width: rem(850);
+    height: rem(555);
+    border-radius: rem(30);
+
+    @include desktop {
+      width: rem(600);
+    }
+
+    @include tablet {
+      width: rem(500);
+    }
+
+    @include mobile {
+      width: rem(350);
+    }
+
+    @include mobile-s {
+      width: rem(270);
+    }
+  }
+
+  &__media,
+  &__map {
+    flex: 1 1 50%;
+  }
+}

@@ -184,6 +184,7 @@
     color: var(--color-white);
 
     @include desktop {
+      text-align: center;
       left: rem(352);
     }
 

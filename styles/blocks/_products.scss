@@ -23,7 +23,7 @@
     margin-right: rem(100);
     font-family: var(--font-family-base);
     font-weight: 800;
-    font-size: rem(50);
+    font-size: rem(80);
     line-height: 1.09;
     color: var(--color-white);
 
@@ -55,8 +55,11 @@
     hyphens: auto;
     transition: all 0.5s ease-out;
 
-    @include tablet {
+    @include desktop {
       text-align: center;
+    }
+
+    @include tablet {
       margin-bottom: rem(60);
     }
   }
