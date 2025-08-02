@@ -12,6 +12,8 @@ body {
 
 * {
   box-sizing: border-box;
+  scrollbar-color: var(--color-green) var(--color-black-dark);
+  scrollbar-width: thin;
 }
 
 * {
@@ -33,5 +35,19 @@ a {
 
 a:focus-visible {
   outline: none;
-  box-shadow: 0 0 rem(2) rem(3) var(--color--green);
+  box-shadow: 0 0 rem(2) rem(3) var(--color-green);
+}
+
+// add scroll bar
+
+::-webkit-scrollbar {
+  background-color: var(--color-black-dark);
+  width: rem(6);
+  height: rem(6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-green);
+  border-radius: 5px;
 }

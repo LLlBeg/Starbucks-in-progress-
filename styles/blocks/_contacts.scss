@@ -1,6 +1,10 @@
 .contacts {
   padding-bottom: rem(80);
 
+  @include tablet {
+    padding-bottom: rem(40);
+  }
+
   &__info {
     display: flex;
     align-items: center;
@@ -83,6 +87,10 @@
     font-size: rem(32);
     line-height: 1.32;
     color: var(--color-green);
+
+    @include mobile {
+      font-size: rem(30);
+    }
   }
 
   &__map {

@@ -8,10 +8,10 @@
     <title>Starbucks 1.0v</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__item">
-          <a href="" class="header__logo__link">
+          <a href="#" class="header__logo__link">
             <img
               class="header__logo"
               src="./image/logo/StarBucks.webp"
@@ -21,13 +21,13 @@
           <nav class="header__nav">
             <ul class="header__list" id="header__list">
               <li class="header__list__item">
-                <a href="#" class="header__list__link">Home</a>
+                <a href="#delicious" class="header__list__link">Home</a>
               </li>
               <li class="header__list__item">
-                <a href="#" class="header__list__link">Select</a>
+                <a href="#products" class="header__list__link">Select</a>
               </li>
               <li class="header__list__item">
-                <a href="#" class="header__list__link">Shop</a>
+                <a href="#events" class="header__list__link">Shop</a>
               </li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -41,7 +41,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container">
           <div class="hero__item">
             <div class="hero__box__left">
@@ -54,10 +54,10 @@
                 coffee and don't forget about the discount!
               </p>
               <div class="hero__box__button__container">
-                <a href="#" class="hero__button__left color-1"
+                <a href="#products" class="hero__button__left color-1"
                   >Select a coffee
                 </a>
-                <a href="#" class="hero__button__right color-1">More </a>
+                <a href="#events" class="hero__button__right color-1">More </a>
               </div>
               <div class="hero__information">
                 <div class="hero__information__card">
@@ -161,7 +161,7 @@
         </div>
       </section>
 
-      <section class="delicious">
+      <section class="delicious" id="delicious">
         <div class="container">
           <div class="delicious__box__item">
             <div class="delicious__box__left">
@@ -340,7 +340,7 @@
         </div>
       </section>
 
-      <section class="events">
+      <section class="events" id="events">
         <div class="container">
           <div class="events__header__container">
             <h2 class="events__title">
@@ -390,7 +390,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="container">
           <div class="contacts__info">
             <div class="contacts__media">
@@ -462,7 +462,7 @@
                   </g>
                 </svg>
                 <a class="contacts__link" href="tel:+1 212-221-7515"
-                  >+12122217515</a
+                  >+1 212-221-7515</a
                 >
               </div>
             </div>
@@ -481,6 +481,128 @@
           </div>
         </div>
       </section>
+
+      <footer class="footer" id="footer">
+        <div class="container">
+          <div class="footer__top">
+            <a class="footer__logo__link" href="#header"
+              ><img
+                src="./image/logo/StarBucks.webp"
+                alt="StarBucksLogo"
+                class="footer__logo"
+            /></a>
+            <div class="footer__information">
+              <ul class="footer__item">
+                <li class="footer__list">
+                  <a class="footer__link head" href="#header">Main</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#products">Buy</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#contacts">More</a>
+                </li>
+              </ul>
+              <ul class="footer__item">
+                <li class="footer__list">
+                  <a class="footer__link head" href="#delicious">We make</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#delicious">Process</a>
+                </li>
+              </ul>
+              <ul class="footer__item">
+                <li class="footer__list">
+                  <a class="footer__link head" href="#products">Products</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#products">Iced Coffee</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#products">Latte</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#products">Macchiatto</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#products">Pink Drink</a>
+                </li>
+              </ul>
+              <ul class="footer__item">
+                <li class="footer__list">
+                  <a class="footer__link head" href="#events">Events</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#events">Drinks</a>
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="#events">Eat</a>
+                </li>
+              </ul>
+              <ul class="footer__item">
+                <li class="footer__list">
+                  <a class="footer__link head" href="#contacts">Contacts</a>
+                </li>
+                <li class="footer__list">
+                  <a
+                    class="footer__link"
+                    target="_blank"
+                    href="https://www.instagram.com/starbucks/"
+                    >instagram</a
+                  >
+                </li>
+                <li class="footer__list">
+                  <a class="footer__link" href="tel:+1 212-221-7515">Number</a>
+                </li>
+              </ul>
+            </div>
+            <a class="footer__link__arrow" href="#header">
+              <img
+                class="footer__arrow"
+                src="./image/footer/ArrowUp.svg"
+                alt="ArrowUp"
+              />
+            </a>
+          </div>
+          <div class="footer__down">
+            <a href="tel:+1 212-221-7515" class="footer__phone__number"
+              >+1 212-221-7515</a
+            >
+            <a
+              target="_blank"
+              href="https://www.instagram.com/starbucks/"
+              class="footer__instagram"
+            >
+              <svg
+                class="contacts__vector"
+                fill="#237249"
+                width="44px"
+                height="44px"
+                viewBox="0 0 32.00 32.00"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#237249"
+                transform="rotate(0)"
+                stroke-width="0.00032"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"
+                  ></path>
+                  <path
+                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
 
       <section class="popUpMenu">
         <div class="popup" id="contact__popup">
