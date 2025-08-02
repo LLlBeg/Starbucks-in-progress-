@@ -223,6 +223,10 @@
     touch-action: none;
     transform-style: preserve-3d;
 
+    @include tablet {
+      width: rem(430);
+    }
+
     @include mobile {
       flex-direction: column;
       width: rem(380);
